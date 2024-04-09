@@ -307,3 +307,16 @@ span.track-inven {display: block; font-size: 12px; color: #7c7c7c;}
 .user img{ border-radius: 50px;
 
 }
+
+#selected-items-container > .row {
+  transition: opacity 0.3s ease-out;
+}
+
+#selected-items-container > .row.remove {
+  opacity: 0;
+}
+
+
+.small-input {
+  width: 150px; /* Adjust the width as needed */
+}

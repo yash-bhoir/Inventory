@@ -1,13 +1,19 @@
-import React from 'react'
+import React from 'react';
 import { NavLink } from 'react-router-dom';
+import Sidenavbar from './Sidenavbar';
+import NewSalesOrder from './NewSalesOrder';
 
-import Sidenavbar from './Sidenavbar'
-
-function Sale(){
-    return <>
-    		<Sidenavbar/>
-
-    <div><h1>Sale</h1></div>
-    </>
+function Sale() {
+    return (
+        <>
+            <Sidenavbar />
+                <div>
+                    <h1>Sale</h1>
+                    <NewSalesOrder/>
+                </div>
+            
+        </>
+    );
 }
-export default Sale
+
+export default Sale;
