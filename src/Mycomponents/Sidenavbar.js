@@ -6,28 +6,28 @@ function Sidenavbar({ toggleSidebar }) {
     <div id="mySidenav" className="inventory-left-menu sidenav">
       <ul>
         <li>
-          <NavLink exact="true" to="/">
+          <NavLink exact to="/">
             <img src="images/home.svg" alt="Home Icon"/> Dashboard
           </NavLink>
         </li>
         <li>
-          <NavLink exact="true" to="/Itemlist">
+          <NavLink exact to="/Itemlist">
             <img src="images/inventory.svg" alt="Inventory Icon"/> Itemlist
           </NavLink>
         </li>
         <li>
-          <NavLink exact="true" to="/Sale">
+          <NavLink exact to="/Sale">
             <img src="images/sales.svg" alt="Sales Icon"/> Sales
           </NavLink>
         </li>
         <li>
-          <NavLink exact="true" to="/Purchase">
+          <NavLink exact to="/Purchase">
             <img src="images/purchase.svg" alt="Purchase Icon"/> Purchase
           </NavLink>
         </li>
         <li>
-          <NavLink exact="true" to="/Report">
-            <img src="images/report.svg" alt="Report Icon"/> Report
+          <NavLink exact to="/Report">
+            <img src="images/invoice1.png" alt="Invoice Icon"/> Invoice
           </NavLink>
         </li>
       </ul>

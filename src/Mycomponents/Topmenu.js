@@ -33,16 +33,16 @@ function Topmenu() {
             <div className="col-md-2 inven_user">
               {isAuthenticated ? (
                 <>
-                  <div><h5>Hello, {user.name}</h5></div>
+                  {/* <div><h5>Hello, {user.name}</h5></div> */}
                 </>
               ) : (
                 <div><h5>Hello, Guest</h5></div>
               )}
             </div>
             <div className="col-md-2">
-              <input type="text" className="form-control" placeholder="Search..." name="" />
+              {/* <input type="text" className="form-control" placeholder="Search..." name="" /> */}
             </div>
-            <div className="col-md-2 orgname">V.K Enterprise pvt ltd.</div>
+            <div className="col-md-2 orgname" style={{ fontSize: '20px' }}>InventiTrack</div>
             <div className="col-md-2 offset-md-2">
               <div className="row">
                 <div className="col-md-6 bell">

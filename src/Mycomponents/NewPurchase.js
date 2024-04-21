@@ -7,7 +7,7 @@ import 'react-datepicker/dist/react-datepicker.css'; // Importing DatePicker CSS
 import { NavLink } from 'react-router-dom';
 
 
-function NewSalesOrder(props) {
+function NewPurchase(props) {
   const { history } = props;
 
   const [items, setItems] = useState([]);
@@ -51,13 +51,13 @@ function NewSalesOrder(props) {
       const selectedItemJSON = JSON.stringify(selectedItems);
       const totalPrice = selectedItems.reduce((total, item) => total + item.price * item.quantity, 0);
       setTotalPrice(totalPrice); // Update totalPrice state variable
-      const response = await axios.post('https://localhost:7225/api/CurdOperations/ManageOrdersDetails', {
+      const response = await axios.post('https://localhost:7225/api/CurdOperations/ManagePurchaseDetails', {
         flag: 'I',
-        orderID: 0,
-        customerName: e.target.elements.customerName.value,
+        purchaseID: 0,
+        venderName: e.target.elements.customerName.value,
         phoneNumber: e.target.elements.phoneNumber.value,
-        orderNumber: salesOrderNumber,
-        orderDate: salesOrderDate.toISOString(),
+        purchaseNumber: salesOrderNumber,
+        purchaseDate: salesOrderDate.toISOString(),
         paymentMethod: e.target.elements.paymentMethod.value,
         paymentStatus: e.target.elements.paymentStatus.value,
         deliveryStatus: e.target.elements.deliveryStatus.value,
@@ -116,7 +116,7 @@ function NewSalesOrder(props) {
         <div className="row">
           <div className="col-md-6">
             <div className="header">
-              <h2>New Order</h2>
+              <h2>New purchase</h2>
             </div>
           </div>
           <div className="col-md-6 d-flex justify-content-end">
@@ -144,7 +144,7 @@ function NewSalesOrder(props) {
                 <div className="row mb-3">
                   <div className="col-sm-6">
                     <div className="form-group">
-                      <label>Customer Name</label>
+                      <label>Vender Name</label>
                       <input type="text" name="customerName" className="form-control" placeholder="Enter customer name" required />
                     </div>
                   </div>
@@ -158,7 +158,7 @@ function NewSalesOrder(props) {
                 <div className="row mb-3">
                   <div className="col-sm-6">
                     <div className="form-group">
-                      <label>Order ID</label>
+                      <label>purchase ID</label>
                       <div className="input-group">
                         <input type="text" className="form-control small-input" value={salesOrderNumber} readOnly />
                         <div className="input-group-append">
@@ -169,7 +169,7 @@ function NewSalesOrder(props) {
                   </div>
                   <div className="col-sm-6">
                     <div className="form-group">
-                      <label>Order Date</label>
+                      <label>purchase Date</label>
                       <br />
                       <DatePicker
                         selected={salesOrderDate}
@@ -284,4 +284,4 @@ function NewSalesOrder(props) {
   );
 }
 
-export default NewSalesOrder;
+export default NewPurchase;
